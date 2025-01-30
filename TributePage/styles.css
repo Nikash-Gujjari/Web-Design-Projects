@@ -1,0 +1,35 @@
+* {
+  background-color: Antiquewhite;
+  justify-content: center;
+}
+title {
+  font: Courier New;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+figure {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+figcaption {
+  display: table-caption;
+  caption-side: bottom;
+  border: solid  grey 1px;
+}
+h1 {
+  text-align: center;
+}
+p {
+  padding: 50px;
+}
+footer {
+  display: table;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  border: dotted red 1px;
+}
