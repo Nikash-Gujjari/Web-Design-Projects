@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <nav id="navbar">
+      <header> Data Structures </header>
+      <a class="nav-link" href="#arrays"> Arrays </a>
+      <a class="nav-link" href="#linkedlists"> 
+        LinkedLists </a>
+      <a class="nav-link" href="#hashmaps"> HashMaps </a>
+      <a class="nav-link" href="#stacks"> Stacks </a>
+      <a class="nav-link" href="#queues"> Queues </a>
+    </nav>
+  <main id="main-doc">
+    <section class="main-section" id="arrays">
+      <header> Arrays </header>
+      <p> An Array is a fixed-size data structure that holds elements of the same type. It provides fast random access to elements by index, but its size cannot be changed once it’s created. Arrays are ideal when the number of elements is known ahead of time and won’t change frequently. Insertion or removal of elements can be inefficient, especially if it requires shifting elements or resizing the array.</p>
+      <ul>
+        <li>Access (get/set): O(1)</li>
+        <li>Search (contains): O(n)</li>
+        <li>Insert/Delete (add/remove): O(n) (due to shifting elements)</li>
+      </ul>
+      <p> Example Use: </p>
+      <pre><code>
+      public class ArrayExample { 
+        public static void main(String[] args) {
+        // Creating and initializing an array
+        int[] numbers = {1, 2, 3, 4, 5};
+
+        // Accessing elements
+        System.out.println("Element at index 2: " + numbers[2]);
+
+        // Iterating through the array
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.println("Element at index " + i + ": " + numbers[i]);
+        }
+
+        // Example of modification
+        numbers[1] = 10;
+        System.out.println("Updated element at index 1: " + numbers[1]);
+    }
+}
+</code></pre>
+    </section>
+    <section class="main-section" id="linkedlists">
+      <header> LinkedLists </header>
+      <p>A linked list is a linear data structure where elements, called nodes, are stored in a sequence. Each node contains two parts: the data and a reference (or link) to the next node in the sequence. This structure allows for dynamic memory allocation, meaning that the size of the list can grow or shrink as needed without needing to allocate a large block of memory upfront. Linked lists are especially efficient for operations that involve frequent insertions and deletions, as these can be done without shifting other elements, but they may suffer from slower access times compared to arrays since you have to traverse the list to access specific elements.</p>
+      <ul>
+        <li>Access (get/set): O(n)</li>
+        <li>Search (contains): O(n)</li>
+        <li>Insert/Delete (add/remove): O(1) at the head/tail, O(n) at a specific index</li>
+      </ul>
+      <p> Example Use: </p>
+      <pre><code>
+import java.util.LinkedList;
+public class LinkedListExample {
+    public static void main(String[] args) {
+        // Creating a LinkedList
+        LinkedList&ltString&gt list = new LinkedList<>();
+
+        // Adding elements
+        list.add("Apple");
+        list.add("Banana");
+        list.add("Cherry");
+
+        // Accessing elements
+        System.out.println("First element: " + list.getFirst());
+
+        // Removing elements
+        list.remove("Banana");
+
+        // Iterating through the LinkedList
+        for (String fruit : list) {
+            System.out.println(fruit);
+        }
+
+        // Example of adding at the beginning and end
+        list.addFirst("Orange");
+        list.addLast("Grape");
+    }
+}
+
+      </code></pre>
+    </section>
+    <section class="main-section" id="hashmaps">
+      <header> HashMaps </header>
+      <p>A hashmap (or hash table) is a data structure that stores key-value pairs, where each key is unique, and each key maps to a corresponding value. The key is hashed using a hash function, which converts it into an index where the value is stored in an array. This allows for very fast average-time lookups, insertions, and deletions, typically in constant time, O(1). Hashmaps are ideal for scenarios where quick access to data based on a known key is required, though they can become inefficient if too many keys hash to the same index (a collision), requiring additional handling techniques like chaining or open addressing.</p>
+      <ul>
+        <li>Access (get/set): O(1) on average, O(n) in worst-case (with collisions)</li>
+        <li>Search (contains): O(1) on average, O(n) in worst-case</li>
+        <li>Insert/Delete (put/remove): O(1) on average, O(n) in worst-case</li>
+      </ul>
+      <p> Example Use: </p>
+      <pre><code>
+import java.util.HashMap;
+public class HashMapExample {
+    public static void main(String[] args) {
+        // Creating a HashMap
+        HashMap&ltString, Integer&gt map = new HashMap<>();
+
+        // Adding key-value pairs
+        map.put("Alice", 25);
+        map.put("Bob", 30);
+        map.put("Charlie", 35);
+
+        // Accessing a value by key
+        System.out.println("Alice's age: " + map.get("Alice"));
+
+        // Checking if a key exists
+        if (map.containsKey("Bob")) {
+            System.out.println("Bob is in the map.");
+        }
+
+        // Removing an entry
+        map.remove("Charlie");
+
+        // Iterating through the HashMap
+        for (String key : map.keySet()) {
+            System.out.println(key + " -> " + map.get(key));
+        }
+    }
+}
+
+      </code></pre>
+    </section>
+    <section class="main-section" id="stacks">
+      <header> Stacks </header>
+      <p>A stack is a linear data structure that follows the Last In, First Out (LIFO) principle, meaning the last element added to the stack is the first one to be removed. Operations on a stack are typically limited to pushing elements onto the top and popping elements off the top, with a peek operation to view the top element without removing it. Stacks are used in scenarios like function calls, where the most recent call needs to be completed first, or in algorithms that require backtracking, such as in depth-first search (DFS) in graphs or undo functionality in applications.</p>
+      <ul>
+        <li>Peek (top): O(1)</li>
+        <li>Push/Pop (add/remove): O(1)</li>
+        <li>Search: O(n)</li>
+      </ul>
+      <<p> Example Use: </p>
+      <pre><code>
+import java.util.Stack;
+public class StackExample {
+    public static void main(String[] args) {
+        // Creating a Stack
+        Stack&ltInteger&gt stack = new Stack<>();
+
+        // Pushing elements onto the stack
+        stack.push(10);
+        stack.push(20);
+        stack.push(30);
+
+        // Popping an element from the stack
+        System.out.println("Popped element: " + stack.pop());
+
+        // Peeking the top element
+        System.out.println("Top element: " + stack.peek());
+
+        // Checking if the stack is empty
+        System.out.println("Is stack empty? " + stack.isEmpty());
+
+        // Iterating through the stack
+        for (Integer item : stack) {
+            System.out.println(item);
+        }
+    }
+}
+
+      </code></prev>
+    </section>
+    <section class="main-section" id="queues">
+      <header> Queues </header>
+      <p>
+        A Queue is a linear data structure that follows the First In, First Out (FIFO) principle. Elements are added to the back (enqueue) and removed from the front (dequeue). It's often used in scheduling tasks, handling requests, and managing data streams.
+      </p>
+      <ul>
+        <li> Peek (front): O(1)</li>
+        <li> Enqueue/Dequeue (add/remove): O(1)</li>
+        <li> Search: O(n) </li>
+      </ul>
+      <p> Example Use: </p>
+      <pre><code>
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class QueueExample {
+    public static void main(String[] args) {
+        // Creating a Queue (using LinkedList)
+        Queue&ltString&gt queue = new LinkedList<>();
+
+        // Enqueuing elements
+        queue.add("Task 1");
+        queue.add("Task 2");
+        queue.add("Task 3");
+
+        // Dequeuing elements
+        System.out.println("Dequeued element: " + queue.poll());
+
+        // Peeking the front element
+        System.out.println("Front element: " + queue.peek());
+
+        // Checking if the queue is empty
+        System.out.println("Is queue empty? " + queue.isEmpty());
+
+        // Iterating through the queue
+        for (String task : queue) {
+            System.out.println(task);
+        }
+    }
+}</code></pre>
+    </section>
+  </main>
+</html>
