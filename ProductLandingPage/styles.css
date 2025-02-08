@@ -1,0 +1,103 @@
+html  {
+  background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/aab98880-40d5-408c-8dde-073e8abebcdb/d5yo2e6-70ee1de9-15f3-4031-beb3-9f75b549d203.png/v1/fill/w_1024,h_576,q_80,strp/pokemon_logo_wallpaper_by_simplewallpapers_d5yo2e6-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTc2IiwicGF0aCI6IlwvZlwvYWFiOTg4ODAtNDBkNS00MDhjLThkZGUtMDczZThhYmViY2RiXC9kNXlvMmU2LTcwZWUxZGU5LTE1ZjMtNDAzMS1iZWIzLTlmNzViNTQ5ZDIwMy5wbmciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.XENGL6yEgruQb441xWZe1pW6xNaxMVTGkjqrg17hKAA);
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 80px;
+  color: #1234a4;
+  font-family: "Lucida Console", "Courier New", monospace;
+  text-align: center;
+  border-bottom: 5mm solid black;
+
+}
+
+h1, #header-img {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 30px;
+  display: inline-block;
+}
+
+#header-img { 
+  width: 90px;
+  height: 90px;
+}
+
+#nav-bar {
+  position: fixed;
+  min-width: 100%; 
+  min-height: 50px;
+  background: #c22323;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 40px
+}
+
+#videohead {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 100px; 
+}
+h3 {
+  margin-top: 300px;
+  margin-bottom: 0px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: bold;
+  background: #778899;
+}
+iframe {
+  margin-left: auto;
+  margin-right: auto;
+}
+#nav-bar {
+  font-size: 30px;
+  padding: 0px;
+}
+#1 {
+  padding-top: 10px;
+}
+#2 {
+  padding-top: 10px;
+}
+#3 {
+  padding-top: 300px;
+}
+
+#form-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+input {
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+label {
+  display: inline-block;
+  margin: 0px;
+  background: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@media only screen and (max-width: 800px) {
+  #nav-bar{
+  flex-wrap: wrap;
+  }
+}
+
+#message {
+  width: 300px;
+  height: 50px;
+}
