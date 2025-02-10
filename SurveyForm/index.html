@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Software Engineer Survey Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1 id="title">Software Engineer Survey Form</h1>
+    <p id="description">Please fill out this form with the required information</p>
+    <form id="survey-form">
+      <fieldset>
+        <label for="name" id="name-label">Enter Your Full Name: <input id="name" type="text" required placeholder="John Doe" /></label>
+        <label for="number" id="number-label">Enter Your Age: <input id="number" type="number" required min="14" max="100" placeholder="39"/></label>
+        <label for="email" id="email-label">Enter Your Email: <input id="email" type="email" required placeholder="John.Doe@domain.com"/></label>
+      </fieldset>
+      <fieldset>
+        <label>Are you currently employed?<label>
+        <label for="Yes"><input id="Yes" type="radio" class="inline" checked value="Y" name="employed?"/> Yes</label>
+        <label for="No"><input id="No" type="radio" class="inline" value="N" name="employed?"/> No</label>
+        <label>What is your employee classification?</label>
+        <label for="fulltime"><input id="fulltime" type="checkbox" class="inline" value="full"/> Full-time</label>
+       <label for="parttime"><input id="parttime" type="checkbox" class="inline" value="part"/> Part-time</label>
+       <label for="contract"><input id="contract" type="checkbox" class="inline" value="contract"/> Contract</label>
+       <label for="indepcontract"><input id="indepcontract" type="checkbox" class="inline" value="indepcontract"/> Independent contractor</label>
+       <label for="temporary"><input id="temporary" type="checkbox" class="inline" value="temp"/> Temporary</label>
+       <label for="oncall"><input id="oncall" type="checkbox" class="inline" value="oncall"/> On-Call</label>
+       <label for="volunteer"><input id="volunteer" type="checkbox" class="inline" value="volunteer"/> Volunteer</label>
+       <label for="other"><input id="other" type="checkbox" class="inline" value="other"/> Other</label>
+      </fieldset>
+      <fieldset>
+        <label for="resume-cv">Upload a Resume/CV: <input id="resume-cv" type="file" name="file" /></label>
+        <label for="dropdown">How did you receive this survey?
+          <select id="dropdown">
+            <option value="0">(select one)</option>
+            <option value="1">Family Relative</option>
+            <option value="2">Coworker/Manager/Supervisor</option>
+            <option value="3">LinkedIn/Indeed/Other Social Networking sites</option>
+            <option value="4">Other</option>
+          </select>
+        </label>
+        <label for="comments">Provide any additional comments:
+          <textarea id="comments" name="comments" rows="3" cols="30" placeholder="My journey in software engineering started when..."></textarea>
+        </label>
+      </fieldset>
+      <label for="honesty-check">
+        <input class="inline" id="honesty-check" type="checkbox" required name="honesty-check" value="Y"/> I acknowledge that the information I provided is correct
+      </label>
+      <input type="submit" id="submit"/>
+    </form>
+  </body>
+</html>
