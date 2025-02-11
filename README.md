@@ -1,2 +1,2 @@
 # Web-Design-Projects
-Web Design Projects by Nikash Gujjari
+HTML & CSS Projects by Nikash Gujjari
